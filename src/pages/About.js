@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
+import GoogleMapSite from '../components/GoogleMapSite';
 
 function About() {
   return (
@@ -26,9 +27,14 @@ function About() {
             <Col style={{fontSize: '20px'}}>
                 <br/>
                 <p>
-                Our Senior members in their 80s and 90s have a huge reservoir  of knowledge to share.  Supper is a friendly time together.
-                Our 50th Birthday is in 2026 with preparations well under way.
+                    Our Senior members in their 80s and 90s have a huge reservoir  of knowledge to share.  Supper is a friendly time together.
+                    Our 50th Birthday is in 2026 with preparations well under way. 
                 </p>
+                <p>
+                    When the 2nd Wednesday of each month from February to December at 8pm. We meet at the <strong>Doncaster RSL Hall</strong>, cnr Doncaster Rd and Leeds St, Doncaster East just east of the Jackson Crt Shopping Centre. The Hall has parking at the rear.
+                </p>
+
+                <GoogleMapSite />
             </Col>
         </Row>
     </Container>

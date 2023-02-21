@@ -23,6 +23,7 @@ function NavBar() {
           <Nav.Link href="/about">About</Nav.Link>
           <Nav.Link href="/calendar">Calendar</Nav.Link>
           <Nav.Link href="/events">Events</Nav.Link>
+          <Nav.Link href="/becomeamember">Member</Nav.Link>
           <Nav.Link href="/history">History</Nav.Link>
           <Nav.Link href="/newsletters">Newsletters</Nav.Link>
           <Nav.Link href="/contacts">Contacts</Nav.Link>

@@ -36,7 +36,7 @@ const GoogleMapSite = () => {
         // eslint-disable-next-line 
       }, [mapOptions])
   return (    
-    <Container id="map" style={{ textAlign:"center", height:"50vh", width:"50vw"}}></Container>
+    <Container id="map" style={{ textAlign:"center", height:"50vh", width:"100%"}}></Container>
     
   )
 }
