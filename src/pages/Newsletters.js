@@ -2,7 +2,10 @@ import React from 'react'
 
 function Newsletters() {
   return (
-    <div>Newsletters</div>
+    <div>
+      <h1>Newsletters</h1> 
+
+    </div>
   )
 }
 

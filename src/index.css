@@ -1,11 +1,9 @@
-
 .background{
     background: url("../public/image/pexels-huy-phan-2987081.jpg") no-repeat;
     background-size: cover; 
     background-attachment: fixed;
     opacity: 0.95;
 }
-
 
 .main-body{
     padding: 5vh;
@@ -17,7 +15,39 @@ h1{
     padding-bottom: 3vh;
 }
 
-
 .logo1{
     height: 5vh;
+}
+
+div.gallery {
+    margin: 5px;
+    width: 50%;
+    margin: 40px auto;
+    
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+#social-media .box{
+    margin: auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+#social-media a i{
+    font-size: 2rem;
+    padding: 10px 30px 10px 30px; 
+}
+
+#social-media a i:hover{
+    transition: 1.2s;
+    transform: rotate(360deg);   
 }

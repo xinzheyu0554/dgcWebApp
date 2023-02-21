@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Container, Row, Col, CardGroup, Card, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 function About() {
   return (

@@ -16,7 +16,7 @@ const GoogleMapSite = () => {
   // set the lng and lat which will be passed from props for a place, and then the zoom is 15 
     const mapOptions = {
         center: location,
-        zoom: 18
+        zoom: 19
     };
 
       useEffect(() => {
@@ -36,7 +36,7 @@ const GoogleMapSite = () => {
         // eslint-disable-next-line 
       }, [mapOptions])
   return (    
-    <Container id="map" style={{ margin:"auto 0", height:"60vh"}}></Container>
+    <Container id="map" style={{ textAlign:"center", height:"50vh", width:"50vw"}}></Container>
     
   )
 }

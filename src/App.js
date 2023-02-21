@@ -28,6 +28,14 @@ function App() {
             </Container>
           </Container>
       </Router>
+      <section id="social-media">
+        <div class="box">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+        </div>
+      </section>
+      <Footer/>
     </div>
 
   );

@@ -7,6 +7,7 @@ const Calendar = React.lazy(() => import('../pages/Calendar'));
 const History = React.lazy(() => import('../pages/History'));
 const Newsletters = React.lazy(() => import('../pages/Newsletters'));
 const Contacts = React.lazy(() => import('../pages/Contacts'));
+const Gallery = React.lazy(() => import('../pages/Gallery'));
 
 
 
@@ -38,6 +39,10 @@ export const router = [
     {
         path:"/contacts",
         element: Contacts
+    },
+    {
+        path:"/gallery",
+        element: Gallery
     },
 
 ]
