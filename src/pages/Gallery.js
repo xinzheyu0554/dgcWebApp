@@ -11,8 +11,9 @@ function Gallery() {
     'image/20221019_180141.jpg']
 
   return (
-    <div>
-        <h1>Gallery</h1>
+    <div style={{margin:"10px"}}>
+        <div style={{padding:"10px"}}>
+                    <h1>Gallery</h1>
         {imageArray.map((a) => {
             return (
                 <div class="gallery">
@@ -23,6 +24,8 @@ function Gallery() {
                 </div>
             )
         })}
+        </div>
+
     </div>
   )
 }

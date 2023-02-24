@@ -13,11 +13,17 @@ import { Container } from 'react-bootstrap';
 function App() {
   return (
     <div>
+
       <Router>
           <Container style={{marginTop: '5vh'}} >
             <NavBar />
-            <Container className="main-body">
+            
+            <div className="main-body">
+            <div class="mask">
+              <img src="/image/Screenshot 2023-02-24 at 13.43.37.png" alt="#" style={{width: "100%",}}></img>
+            </div>
               <React.Suspense>
+                
                 <Routes>
                     {router.map((e,i) => (
                       <Route path={e.path} element={<e.element/>} key={i} ></Route>
@@ -25,7 +31,10 @@ function App() {
                     )}
                 </Routes>
               </React.Suspense>
-            </Container>
+              <div class="mask1">
+              <img src="/image/Screenshot 2023-02-24 at 13.43.37.png" alt="#" style={{width: "100%",}}></img>
+            </div>
+            </div>
           </Container>
       </Router>
       <section id="social-media">

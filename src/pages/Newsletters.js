@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 
 
 function Newsletters() {
@@ -33,8 +33,9 @@ function Newsletters() {
   ]
 
   return (
-    <div>
-      <h1>Newsletters</h1> 
+    <div style={{margin:"10px"}}> 
+    <div style={{padding:"10px"}}>
+    <h1>Newsletters</h1> 
       <Row style={{ textAlign:"center"}}>
       <Col lg={6}>
         <h2>2022</h2>
@@ -62,9 +63,8 @@ function Newsletters() {
         })}
       </Col>
       </Row>
-      
-      
-      
+    </div>
+     
     </div>
   )
 }
