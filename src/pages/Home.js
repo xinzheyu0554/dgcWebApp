@@ -24,7 +24,9 @@ function Home() {
 
             </Col>
             <Col lg={5} style={{textAlign: 'center', }}>
+              
                 <img style={{height: '30vh', }} src="image/DGC_logo2.png" alt="#" />
+              
             </Col>
             
         </Row>
@@ -43,28 +45,36 @@ function Home() {
             <Row>
               <Col lg="3" >
                 <Container className='asd'>
+                <a href="/image/20200915_160139.jpg">
                   <img src="/image/20200915_160139.jpg" alt="#"></img>
+                </a>
                   <div class="desc">Add a description of the image here</div>
                 </Container>
                 
               </Col>
               <Col lg="3">
               <Container className='asd'>
+              <a href="/image/20210623_122500.jpg">
               <img src="/image/20210623_122500.jpg" alt="#"></img>
+              </a>
               <div class="desc">Add a description of the image here</div>
                 </Container >
                 
               </Col>
               <Col lg="3">
               <Container className='asd'>
+              <a href="/image/20220304_081057.jpg">
                   <img src="/image/20220304_081057.jpg" alt="#"></img>
+                  </a>
                   <div class="desc">Add a description of the image here</div>
                 </Container>
                 
               </Col>
               <Col lg="3">
               <Container className='asd'>
+              <a href="/image/20211211_102813.jpg" >
                   <img src="/image/20211211_102813.jpg" alt="#"></img>
+                  </a>
                   <div class="desc">Add a description of the image here</div>
                 </Container>
               </Col>
