@@ -79,8 +79,11 @@ div.desc {
 }
 
 .showImage{
-    
     padding-bottom: 20px;
+}
+
+.showImage .asd{
+    padding-bottom: 40px;
 }
 
 .showImage img{

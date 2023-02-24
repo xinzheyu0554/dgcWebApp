@@ -15,34 +15,66 @@ function Home() {
                 <p>
                 Up to 50 of us meet monthly (except January) to hear a Speaker teach us re healthy soils, fertilisers and soil conditioners, grey water use as well as growing flowers, fruit and vegetables. 
                 </p>
-                <a href="/about" style={{position: "absolute", right: "0", bottom: "0"}}>more</a>
+                <br/>
+                <div style={{margin:"10px", textAlign: "center"}}>
+                  <a href="/becomeamember"><button  class="btn btn-lg btn-primary" type="button">Join Us Now</button></a> 
+                </div>
+                <br/>
+                <a href="/about" style={{float:"right"}}>MORE</a>
+
             </Col>
             <Col lg={5} style={{textAlign: 'center', }}>
                 <img style={{height: '30vh', }} src="image/DGC_logo2.png" alt="#" />
             </Col>
+            
         </Row>
       </div>
       <br/>
       <br/>
-      <hr style={{ width:"100%", color:"#987cb9"}}></hr>
+   
+
+
       
+      <hr style={{ width:"100%", color:"#987cb9"}}></hr>
+
+      <div style={{margin:"10px"}}>
         <h1>Enjoy Gardening, Enjoy live!</h1>
-        <Container className="showImage">
-          <Row>
-            <Col lg="3">
-              <img src="/image/20200915_160139.jpg" alt="#"></img>
-            </Col>
-            <Col lg="3">
-            <img src="/image/20210623_122500.jpg" alt="#"></img>
-            </Col>
-            <Col lg="3">
-            <img src="/image/20220304_081057.jpg" alt="#"></img>
-            </Col>
-            <Col lg="3">
-            <img src="/image/20211211_102813.jpg" alt="#"></img>
-            </Col>
-          </Row>
-        </Container>
+          <Container className="showImage">
+            <Row>
+              <Col lg="3" >
+                <Container className='asd'>
+                  <img src="/image/20200915_160139.jpg" alt="#"></img>
+                  <div class="desc">Add a description of the image here</div>
+                </Container>
+                
+              </Col>
+              <Col lg="3">
+              <Container className='asd'>
+              <img src="/image/20210623_122500.jpg" alt="#"></img>
+              <div class="desc">Add a description of the image here</div>
+                </Container >
+                
+              </Col>
+              <Col lg="3">
+              <Container className='asd'>
+                  <img src="/image/20220304_081057.jpg" alt="#"></img>
+                  <div class="desc">Add a description of the image here</div>
+                </Container>
+                
+              </Col>
+              <Col lg="3">
+              <Container className='asd'>
+                  <img src="/image/20211211_102813.jpg" alt="#"></img>
+                  <div class="desc">Add a description of the image here</div>
+                </Container>
+              </Col>
+            </Row>
+          </Container>
+        
+        
+          <a href="/gallery" style={{float:"right"}}>MORE</a>
+          <br/>
+      </div>
       
 
     </div>
