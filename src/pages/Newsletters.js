@@ -37,7 +37,7 @@ function Newsletters() {
     <div style={{padding:"10px"}}>
     <h1>Newsletters</h1> 
       <Row style={{ textAlign:"center"}}>
-      <Col lg={6}>
+      <Col lg={6} style={{ marginTop:"20px"}}>
         <h2>2022</h2>
         {Newsletters2022.map((a) => {
           return (
@@ -48,10 +48,7 @@ function Newsletters() {
           )
         })}
       </Col>
-      
-      
-      <br/>
-      <Col lg={6}>
+      <Col lg={6} style={{ marginTop:"20px"}}>
         <h2>2021</h2>
         {Newsletters2021.map((a) => {
           return (
