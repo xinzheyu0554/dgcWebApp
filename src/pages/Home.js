@@ -80,9 +80,11 @@ function Home() {
               </Col>
             </Row>
           </Container>
-        
-        
-          <a href="/gallery" style={{float:"right"}}>MORE</a>
+          <div style={{textAlign: 'center' }}>
+            <h3>You can find more in the Gallery.</h3>
+            <a href="/gallery"><button  class="btn btn-lg btn-primary" type="button">Go to Gardening Gallery</button></a> 
+          </div>
+          
           <br/>
       </div>
       

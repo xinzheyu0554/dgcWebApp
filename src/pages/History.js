@@ -8,7 +8,10 @@ function History() {
                 <h1>History</h1>
         <Row style={{height: 'auto'}}>
             <Col lg={4} style={{textAlign: 'center', }}>
-                <img style={{height: '30vh', }} src="image/DGC_logo.png" alt="#" />
+            <div class="coin">
+              <img style={{height: '18vh', }} src="image/DGC_logo.png" alt="#" />
+            </div>
+                
             </Col>
             <Col lg={8} style={{fontSize: '20px'}}>
                 <p>Doncaster Garden Club  started in 1976 with a small group meeting in a home for an inaugural meeting. The Club grew from there. </p>

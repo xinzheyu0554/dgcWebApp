@@ -35,6 +35,11 @@ div.desc {
     text-align: center;
 }
 
+#social-media{
+    background-color: rgba(115, 115, 115, 0.515);
+    
+}
+
 #social-media .box{
     margin: auto;
     max-width: 800px;
@@ -115,3 +120,24 @@ div.desc {
     opacity: 0.65;
     
 }
+
+
+.coin {
+
+    animation: rotate 5s linear;
+    border-radius: 50%;
+  }
+  
+  .coin:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+  
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
