@@ -1,5 +1,5 @@
 .background{
-    background: url("../public/image/pexels-huy-phan-2987081.jpg") no-repeat;
+    background: url("../public/image/20220204_051313.jpg") no-repeat;
     background-size: cover; 
     background-attachment: fixed;
 }
@@ -140,4 +140,10 @@ div.desc {
     100% {
       transform: rotateY(360deg);
     }
+  }
+
+
+  .newsletter123{
+    font-size: 22px;
+    text-decoration:none;
   }

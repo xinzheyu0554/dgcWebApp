@@ -82,6 +82,7 @@ function Home() {
           </Container>
           <div style={{textAlign: 'center' }}>
             <h3>You can find more in the Gallery.</h3>
+            <br/>
             <a href="/gallery"><button  class="btn btn-lg btn-primary" type="button">Go to Gardening Gallery</button></a> 
           </div>
           

@@ -42,7 +42,7 @@ function Newsletters() {
         {Newsletters2022.map((a) => {
           return (
             <>
-              <a target="_blank" rel="noreferrer" href={"/documentation/newsletter/2022/" + a}>{a}</a>
+              <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2022/" + a}>{a}</a>
               <br/>
             </>
           )
@@ -53,7 +53,7 @@ function Newsletters() {
         {Newsletters2021.map((a) => {
           return (
             <>
-              <a target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
+              <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
               <br/>
             </>
           )
