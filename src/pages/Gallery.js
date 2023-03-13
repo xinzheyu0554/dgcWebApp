@@ -20,7 +20,7 @@ function Gallery() {
                 <a href={a}>
                     <img src={a} alt="Cinque Terre" width="600" height="400"></img>
                 </a>
-                <div class="desc">Add a description of the image here</div>
+                {/* <div class="desc">Add a description of the image here</div> */}
                 </div>
             )
         })}

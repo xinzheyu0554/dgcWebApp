@@ -8,10 +8,10 @@ function NavBar() {
     <Navbar bg="primary" expand="lg" variant="dark">
         
     <Container fluid>
-      <Navbar.Brand href="/">
+      <Navbar.Brand href="/" style={{color: 'rgb(255, 232, 181)'}}>
         <img className="logo1" src="image/web_icon.png" alt="/"/>
         DoncasterGardenClub
-        </Navbar.Brand>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -20,13 +20,13 @@ function NavBar() {
           navbarScroll
         >
           
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/calendar">Calendar</Nav.Link>
-          <Nav.Link href="/becomeamember">Member</Nav.Link>
-          <Nav.Link href="/history">History</Nav.Link>
-          <Nav.Link href="/newsletters">Newsletters</Nav.Link>
-          <Nav.Link href="/contacts">Contacts</Nav.Link>
-          <Nav.Link href="/gallery">Gallery</Nav.Link>
+          <Nav.Link href="/about" style={{color: 'rgb(255, 232, 181)'}}>About</Nav.Link>
+          <Nav.Link href="/calendar" style={{color: 'rgb(255, 232, 181)'}}>Calendar</Nav.Link>
+          <Nav.Link href="/becomeamember" style={{color: 'rgb(255, 232, 181)'}}>Member</Nav.Link>
+          <Nav.Link href="/history" style={{color: 'rgb(255, 232, 181)'}}>History</Nav.Link>
+          <Nav.Link href="/newsletters" style={{color: 'rgb(255, 232, 181)'}}>Newsletters</Nav.Link>
+          <Nav.Link href="/contacts" style={{color: 'rgb(255, 232, 181)'}}>Contacts</Nav.Link>
+          <Nav.Link href="/gallery" style={{color: 'rgb(255, 232, 181)'}}>Gallery</Nav.Link>
           {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action4">

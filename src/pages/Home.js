@@ -4,8 +4,9 @@ import { Col, Container, Row } from 'react-bootstrap'
 
 function Home() {
   return (
-    <div>
+    
       <div style={{margin:"10px"}}>
+      <div style={{padding:"10px"}}>
         <h1>Welcome to Doncaster Garden Club!</h1>
         <Row style={{height: 'auto'}}>
             <Col lg={7} style={{position: "relative",fontSize: '20px'}}>
@@ -48,7 +49,7 @@ function Home() {
                 <a href="/image/20200915_160139.jpg">
                   <img src="/image/20200915_160139.jpg" alt="#"></img>
                 </a>
-                  <div class="desc">Add a description of the image here</div>
+                  {/* <div class="desc">Add a description of the image here</div> */}
                 </Container>
                 
               </Col>
@@ -57,7 +58,7 @@ function Home() {
               <a href="/image/20210623_122500.jpg">
               <img src="/image/20210623_122500.jpg" alt="#"></img>
               </a>
-              <div class="desc">Add a description of the image here</div>
+              {/* <div class="desc">Add a description of the image here</div> */}
                 </Container >
                 
               </Col>
@@ -66,7 +67,7 @@ function Home() {
               <a href="/image/20220304_081057.jpg">
                   <img src="/image/20220304_081057.jpg" alt="#"></img>
                   </a>
-                  <div class="desc">Add a description of the image here</div>
+                  {/* <div class="desc">Add a description of the image here</div> */}
                 </Container>
                 
               </Col>
@@ -75,7 +76,7 @@ function Home() {
               <a href="/image/20211211_102813.jpg" >
                   <img src="/image/20211211_102813.jpg" alt="#"></img>
                   </a>
-                  <div class="desc">Add a description of the image here</div>
+                  {/* <div class="desc">Add a description of the image here</div> */}
                 </Container>
               </Col>
             </Row>
