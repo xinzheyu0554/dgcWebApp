@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 function NavBar() {
+
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
         
