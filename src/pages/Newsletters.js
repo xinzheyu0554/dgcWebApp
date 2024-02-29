@@ -38,26 +38,32 @@ function Newsletters() {
     <h1>Newsletters</h1> 
       <Row style={{ textAlign:"center"}}>
       <Col lg={6} style={{ marginTop:"20px"}}>
-        <h2>2022</h2>
-        {Newsletters2022.map((a) => {
+      <h2>2021 Newsletters</h2>
+        <details>
+          <option value=""></option>
+          {Newsletters2022.map((a) => {
+            return (
+              <>
+                <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
+              </>
+            )
+          })}
+        </details>
+      </Col>
+      
+      <Col lg={6} style={{ marginTop:"20px"}}>
+      <h2>2022 Newsletters</h2>
+        <details>
+          {Newsletters2021.map((a) => {
           return (
             <>
               <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2022/" + a}>{a}</a>
-              <br/>
+              
             </>
           )
         })}
-      </Col>
-      <Col lg={6} style={{ marginTop:"20px"}}>
-        <h2>2021</h2>
-        {Newsletters2021.map((a) => {
-          return (
-            <>
-              <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
-              <br/>
-            </>
-          )
-        })}
+        </details>
+        
       </Col>
       </Row>
     </div>

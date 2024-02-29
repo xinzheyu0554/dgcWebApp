@@ -8,7 +8,6 @@ function Contacts() {
         <br/>
         <p><strong>Hon President</strong>: Pauline Webb</p>
         <p><strong>Hon Secretary</strong>: Avril Clark</p>
-        <p><strong>Official Email</strong>: doncastergardenclubinc@gmail.com</p>
       </div>
 
     </div>
