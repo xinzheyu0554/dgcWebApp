@@ -16,12 +16,13 @@ function Home() {
                 <p>
                 Up to 50 of us meet monthly (except January) to hear a Speaker teach us re healthy soils, fertilisers and soil conditioners, grey water use as well as growing flowers, fruit and vegetables. 
                 </p>
+                <a href="/about" style={{float:"right"}}>MORE</a>
                 <br/>
+                
                 <div style={{margin:"10px", textAlign: "center"}}>
                   <a href="/becomeamember"><button  class="btn btn-lg btn-primary" type="button">Join Us Now</button></a> 
                 </div>
-                <br/>
-                <a href="/about" style={{float:"right"}}>MORE</a>
+                
 
             </Col>
             <Col lg={5} style={{textAlign: 'center', }}>

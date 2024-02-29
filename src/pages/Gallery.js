@@ -14,16 +14,23 @@ function Gallery() {
     <div style={{margin:"10px"}}>
         <div style={{padding:"10px"}}>
                     <h1>Gallery</h1>
+                    <div className="pp-gallery">
+    <div className="card-columns">     
         {imageArray.map((a) => {
             return (
-                <div class="gallery">
-                <a href={a}>
-                    <img src={a} alt="Cinque Terre" width="600" height="400"></img>
-                </a>
-                {/* <div class="desc">Add a description of the image here</div> */}
+                <div className="card1">
+                <figure className="pp-effect">
+                    <a href={a} target="_blank" rel="noreferrer"><img className="img-fluid" src={a} alt={a}/></a>
+                    {/* <figcaption>
+                    <div class="h4">Clota Cottage Neighbourhood House</div>
+                    </figcaption> */}
+                </figure>
                 </div>
             )
         })}
+
+        </div>
+        </div>
         </div>
 
     </div>
