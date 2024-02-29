@@ -45,6 +45,7 @@ function Newsletters() {
             return (
               <>
                 <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
+                <br/>
               </>
             )
           })}
@@ -58,7 +59,7 @@ function Newsletters() {
           return (
             <>
               <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2022/" + a}>{a}</a>
-              
+              <br/>
             </>
           )
         })}
