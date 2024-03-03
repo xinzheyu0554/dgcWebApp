@@ -3,21 +3,6 @@ import { Col, Row } from 'react-bootstrap'
 
 
 function Newsletters() {
-
-  const Newsletters2022 = [
-    "Garden club newsletter February 2022 pub.pdf",
-    "Garden club newsletter March 2022 pub.pdf",
-    "Garden club newsletter april 2022 pub.pdf",
-    "Garden club newsletter May 2022 pub.pdf",
-    "Garden club newsletter jUNE 2022 pub.pdf",
-    "Garden club newsletter July 2022 pub.pdf",
-    "Garden club newsletter August 2022.pdf",
-    "Garden club newsletter September  2022.pdf",
-    "Garden club newsletter October 2022.pdf",
-    "Garden club newsletter November 2022.pdf",
-    "Garden club newsletter NewsLetter Dec 2022.pdf",
-  ]
-
   const Newsletters2021 = [
     "Garden club newsletter February 2021 -.pdf",
     "Garden club newsletter March 2021.pdf",
@@ -31,6 +16,22 @@ function Newsletters() {
     "Garden club newsletter November  2021.pdf",
     "Garden club newsletter December  2021.pdf",
   ]
+  
+  const Newsletters2022 = [
+    "Garden club newsletter February 2022 pub.pdf",
+    "Garden club newsletter March 2022 pub.pdf",
+    "Garden club newsletter April 2022 pub.pdf",
+    "Garden club newsletter May 2022 pub.pdf",
+    "Garden club newsletter jUNE 2022 pub.pdf",
+    "Garden club newsletter July 2022 pub.pdf",
+    "Garden club newsletter August 2022.pdf",
+    "Garden club newsletter September  2022.pdf",
+    "Garden club newsletter October 2022.pdf",
+    "Garden club newsletter November 2022.pdf",
+    "Garden club newsletter NewsLetter Dec 2022.pdf",
+  ]
+
+
 
   return (
     <div style={{margin:"10px"}}> 
@@ -41,7 +42,7 @@ function Newsletters() {
       
         <details>
           <summary>2021 Newsletters</summary>
-          {Newsletters2022.map((a) => {
+          {Newsletters2021.map((a) => {
             return (
               <>
                 <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
@@ -56,7 +57,7 @@ function Newsletters() {
       
         <details>
         <summary>2022 Newsletters</summary>
-          {Newsletters2021.map((a) => {
+          {Newsletters2022.map((a) => {
           return (
             <>
               <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2022/" + a}>{a}</a>
