@@ -55,7 +55,7 @@ function Newsletters() {
       <Col lg={6} style={{ marginTop:"20px"}}>
       
         <details>
-        <summary>2021 Newsletters</summary>
+        <summary>2022 Newsletters</summary>
           {Newsletters2021.map((a) => {
           return (
             <>
