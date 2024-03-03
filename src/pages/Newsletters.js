@@ -22,7 +22,7 @@ function Newsletters() {
     "Garden club newsletter March 2022 pub.pdf",
     "Garden club newsletter April 2022 pub.pdf",
     "Garden club newsletter May 2022 pub.pdf",
-    "Garden club newsletter jUNE 2022 pub.pdf",
+    "Garden club newsletter June 2022 pub.pdf",
     "Garden club newsletter July 2022 pub.pdf",
     "Garden club newsletter August 2022.pdf",
     "Garden club newsletter September  2022.pdf",
@@ -31,6 +31,19 @@ function Newsletters() {
     "Garden club newsletter NewsLetter Dec 2022.pdf",
   ]
 
+  const Newsletters2023 = [
+    "DCG February 2023 Newsletter.pdf",
+    "DCG March 2023 Newsletter.pdf",
+    "DGC April 2023 newsletter with attachment.pdf",
+    "DGC August 2023 Newsletter.pdf",
+    "DGC December 2023 Newsletter.pdf",
+    "DGC June 2024 Newsletter.pdf",
+    "DGC July 2024 Newsletter.pdf",
+    "DGC May 2023 Newsletter.pdf",
+    "DGC November 2023 Newsletter.pdf",
+    "DGC October 2023 Newsletter.pdf",
+    "DGC September 2023 Newsletter.pdf",
+  ]
 
 
   return (
@@ -38,22 +51,25 @@ function Newsletters() {
     <div style={{padding:"10px"}}>
     <h1>Newsletters</h1> 
       <Row style={{ textAlign:"center"}}>
-      <Col lg={6} style={{ marginTop:"20px"}}>
+
+      <Col lg={12} style={{ marginTop:"20px"}}>
       
         <details>
-          <summary>2021 Newsletters</summary>
-          {Newsletters2021.map((a) => {
-            return (
-              <>
-                <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
-                <br/>
-              </>
-            )
-          })}
+        <summary>2023 Newsletters</summary>
+          {Newsletters2023.map((a) => {
+          return (
+            <>
+              <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2023/" + a}>{a}</a>
+              <br/>
+            </>
+          )
+        })}
         </details>
+        
       </Col>
-      
-      <Col lg={6} style={{ marginTop:"20px"}}>
+
+
+      <Col lg={12} style={{ marginTop:"20px"}}>
       
         <details>
         <summary>2022 Newsletters</summary>
@@ -68,6 +84,24 @@ function Newsletters() {
         </details>
         
       </Col>
+
+      <Col lg={12} style={{ marginTop:"20px"}}>
+      
+        <details>
+          <summary>2021 Newsletters</summary>
+          {Newsletters2021.map((a) => {
+            return (
+              <>
+                <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2021/" + a}>{a}</a>
+                <br/>
+              </>
+            )
+          })}
+        </details>
+      </Col>
+      
+
+     
       </Row>
     </div>
      
