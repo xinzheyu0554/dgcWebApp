@@ -17,7 +17,6 @@ function App() {
       <Router>
           <Container style={{marginTop: '5vh'}} >
             <NavBar />
-            
             <div className="main-body">
             <div class="mask">
               <img src="/image/Screenshot 2023-02-24 at 13.43.37.png" alt="#" style={{width: "100%",}}></img>
