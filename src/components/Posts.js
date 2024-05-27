@@ -51,7 +51,7 @@ import {
     };
   
     return (
-      <div style={{margin:"10px", textAlign: "center"}}>
+      <div style={{margin:"10px", textAlign:"center"}}>
           <Input id="imageInput" type="file" hidden onChange={handleUpload} />
           <Button
             as="label"
