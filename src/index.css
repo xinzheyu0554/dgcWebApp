@@ -274,3 +274,11 @@ padding-top: 20%;
 font-size: 16px; } }
 
 
+.privacyPolicy {
+    margin: 15px;
+}
+
+.privacyPolicy .wordFrame {
+    border: rgb(109, 221, 39) solid; 
+    padding: 5px;
+}

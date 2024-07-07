@@ -8,6 +8,7 @@ const Newsletters = React.lazy(() => import('../pages/Newsletters'));
 const Contacts = React.lazy(() => import('../pages/Contacts'));
 const Gallery = React.lazy(() => import('../pages/Gallery'));
 const BecomeAMember = React.lazy(() => import('../pages/BecomeAMember'));
+const PrivacyPolicy = React.lazy(() => import('../pages/PrivacyPolicy'));
 
 
 
@@ -43,6 +44,10 @@ export const router = [
     {
         path:"/becomeamember",
         element: BecomeAMember
+    },
+    {
+        path:"/PrivacyPolicy",
+        element: PrivacyPolicy
     }
 
 ]

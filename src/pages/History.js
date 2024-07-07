@@ -8,7 +8,7 @@ function History() {
                 <h1>History</h1>
         <Row style={{height: 'auto'}}>
             <Col lg={4} style={{textAlign: 'center', }}>
-            <div class="coin">
+            <div className="coin">
               <img style={{height: '18vh', }} src="image/DGC_logo.png" alt="#" />
             </div>
                 

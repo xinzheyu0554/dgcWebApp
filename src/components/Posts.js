@@ -10,7 +10,7 @@ import {
   
   const validFileTypes = ['image/jpg', 'image/jpeg', 'image/png'];
   const URL = '/images';
-  
+  let images = [];
   const ErrorText = ({ children, ...props }) => (
     <Text fontSize="lg" color="red.300" {...props}>
       {children}
@@ -86,8 +86,9 @@ import {
           <div className="pp-gallery">
             <div className="card-columns">     
                 {imageUrls?.length > 0 && imageUrls.map((a) => {
+                  // images.push(`<div className="card" ><figure className="pp-effect"><a href=${a} target="_blank" rel="noreferrer"><img className="img-fluid" src=${a} alt=${a}/></a></figure></div>`)
                     return (
-                        <div className="card" s>
+                        <div className="card" key={a}>
                             <figure className="pp-effect">
                                 <a href={a} target="_blank" rel="noreferrer"><img className="img-fluid" src={a} alt={a}/></a>
                             </figure>
@@ -96,6 +97,7 @@ import {
                 })}
             </div>
           </div>
+          <p>{console.log(images)}</p>
       </div>
     );
   };
