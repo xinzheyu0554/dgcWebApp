@@ -86,7 +86,6 @@ import {
           <div className="pp-gallery">
             <div className="card-columns">     
                 {imageUrls?.length > 0 && imageUrls.map((a) => {
-                  // images.push(`<div className="card" ><figure className="pp-effect"><a href=${a} target="_blank" rel="noreferrer"><img className="img-fluid" src=${a} alt=${a}/></a></figure></div>`)
                     return (
                         <div className="card" key={a}>
                             <figure className="pp-effect">

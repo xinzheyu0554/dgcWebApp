@@ -13,7 +13,6 @@ import { Container } from 'react-bootstrap';
 function App() {
   return (
     <div>
-
       <Router>
           <Container style={{marginTop: '5vh'}} >
             <NavBar />
@@ -42,10 +41,9 @@ function App() {
             <a href="/"><i className="fa-brands fa-twitter-square"></i></a>
             <a href="/"><i className="fa-brands fa-instagram-square"></i></a>
         </div>
-      </section>
       <Footer/>
+      </section>
     </div>
-
   );
 }
 
