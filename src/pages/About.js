@@ -8,29 +8,29 @@ function About() {
            
     <div style={{padding:"10px"}}>
         <h1>About</h1>
+        <div style={{textAlign:'center'}}>
+            <img style={{height: '50vh'}} src="image/DGC_logo2.png" alt="#" />
+            
+        </div>
         <Row style={{height: 'auto'}}>
 
-            <Col lg={7} style={{fontSize: '20px'}}>
-                <p>Doncaster Garden Club began more than 46 years ago to help would-be gardeners with knowledge for growing plants. We are Affiliated with Garden Clubs of Australia.   
+            <Col lg={12} style={{fontSize: '20px'}}>
+                <p>Doncaster Garden Club began in 1976 with a small group meeting in a home for an inaugural meeting to help would-be gardeners with knowledge for growing plants.  Our Senior members in their 80s and 90s have a huge reservoir of knowledge to share. The Club grew from there.   
                 </p>
-                <br/>
-                <p>
-                Up to 50 of us meet monthly (except January) to hear a Speaker teach us re healthy soils, fertilisers and soil conditioners, grey water use as well as growing flowers, fruit and vegetables. 
-                </p>
+                <p>Historically our members, almost 50 of us, meet monthly (except January) to hear an expert speaker share knowledge on sustainable gardening topics including healthy soils, fertilisers and soil conditioners, grey water use, growing flowers, fruit and vegetables. The information sharing session is followed by supper - a friendly time together.</p>
+
+                <p>Our meeting is on the 2nd Wednesday of each month from February to December starting at 8pm. We meet at the Doncaster RSL Hall, Corner Doncaster Rd and Leeds St, Doncaster East just east of the Jackson Court Shopping Centre. There is ample parking at the rear of the Hall.</p>
+                <GoogleMapSite />
             </Col>
-            <Col lg={5} style={{textAlign: 'center', }}>
-                <img style={{height: '30vh', }} src="image/DGC_logo2.png" alt="#" />
-            </Col>
+
             <Col style={{fontSize: '20px'}}>
                 <br/>
-                <p>
-                    Our Senior members in their 80s and 90s have a huge reservoir  of knowledge to share.  Supper is a friendly time together.
-                    Our 50th Birthday is in 2026 with preparations well under way. 
-                </p>
-                <p>
-                    When the 2nd Wednesday of each month from February to December at 8pm. We meet at the <strong>Doncaster RSL Hall</strong>, cnr Doncaster Rd and Leeds St, Doncaster East just east of the Jackson Crt Shopping Centre. The Hall has parking at the rear.
-                </p>
-                <GoogleMapSite />
+                <strong><p>Affiliations:</p></strong>
+                <p>Garden Clubs of Australia Inc.</p>
+                <p>Ivanhoe Garden Club</p>
+                <p>Preston Garden Club Inc.</p>
+                <p>Kevin Heinze Grow</p>
+                <p>Doncaster RSL</p>
             </Col>
         </Row>
         </div>
