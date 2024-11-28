@@ -21,14 +21,14 @@ function NavBar() {
           <Nav.Link href="/newsletters" style={{color: 'rgb(255, 232, 181)'}}><strong>Newsletters</strong></Nav.Link>
           <Nav.Link href="/contacts" style={{color: 'rgb(255, 232, 181)'}}><strong>Contacts</strong></Nav.Link>
           <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic" style={{color: 'rgb(255, 232, 181)', backgroundColor: ''}}>
+            <Dropdown.Toggle id="dropdown-basic" style={{color: 'rgb(255, 232, 181)'}}>
               <strong>Gallery</strong>
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="/gallery">Action</Dropdown.Item>
+              <Dropdown.Item href="/gallery" style={{color: '#56cc9d'}}><strong>Plant</strong></Dropdown.Item>
+              <Dropdown.Item href="/eventgallery" style={{color: '#56cc9d'}}><strong>Event</strong></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          
           <Nav.Link href="/PrivacyPolicy" style={{color: 'rgb(255, 232, 181)'}}><strong>Privacy Policy</strong></Nav.Link>
         </Nav>
       </Navbar.Collapse>

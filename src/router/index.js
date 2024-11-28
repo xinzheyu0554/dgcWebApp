@@ -8,6 +8,9 @@ const Contacts = React.lazy(() => import('../pages/Contacts'));
 const Gallery = React.lazy(() => import('../pages/Gallery'));
 const BecomeAMember = React.lazy(() => import('../pages/BecomeAMember'));
 const PrivacyPolicy = React.lazy(() => import('../pages/PrivacyPolicy'));
+const eventgallery = React.lazy(() => import('../pages/EventGallery'));
+
+
 
 export const router = [
     {
@@ -41,6 +44,11 @@ export const router = [
     {
         path:"/PrivacyPolicy",
         element: PrivacyPolicy
+    },
+    {
+        path:"/eventgallery",
+        element: eventgallery
     }
 
+    
 ]
