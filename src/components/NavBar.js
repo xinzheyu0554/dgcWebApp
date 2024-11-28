@@ -25,8 +25,8 @@ function NavBar() {
               <strong>Gallery</strong>
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="/gallery" style={{color: '#56cc9d'}}><strong>Plant</strong></Dropdown.Item>
-              <Dropdown.Item href="/eventgallery" style={{color: '#56cc9d'}}><strong>Event</strong></Dropdown.Item>
+              <Dropdown.Item href="/gallery" style={{color: '#56cc9d'}}><strong>Plants</strong></Dropdown.Item>
+              <Dropdown.Item href="/eventgallery" style={{color: '#56cc9d'}}><strong>Events</strong></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Nav.Link href="/PrivacyPolicy" style={{color: 'rgb(255, 232, 181)'}}><strong>Privacy Policy</strong></Nav.Link>
