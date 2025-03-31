@@ -34,6 +34,13 @@ function About() {
             </Col>
         </Row>
         </div>
+        <h2>Doncaster Garden Club Inc RULES</h2>
+        
+        <details>
+        <summary>Doncaster Garden Club Inc RULES</summary>
+            <iframe title="2023" src="/documentation/Doncaster Garden Club Inc RULES (Dec 2024).pdf" width="100%" height="800px"></iframe>
+        </details>
+        
     </Container>
   )
 }

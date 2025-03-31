@@ -58,13 +58,31 @@ function Newsletters() {
     "10. November 2024 Newsletter.pdf",
   ]
 
+  const Newsletters2025 = [
+    "1. February 2025 Newsletter.pdf",
+    "2. March 2025 Newsletter.pdf"
+  ]
+
   return (
     <div style={{margin:"10px"}}> 
     <div style={{padding:"10px"}}>
     <h1>Newsletters</h1> 
-    <h2>December 2024 Newsletter</h2>
-    <iframe title="2023" src="/documentation/newsletter/2024/11. December 2024 Newsletter.pdf" width="100%" height="800px"></iframe>
+    <h2>March 2025 Newsletter</h2>
+    <iframe title="2025" src="/documentation/newsletter/2025/2. March 2025 Newsletter.pdf" width="100%" height="800px"></iframe>
       <Row style={{ textAlign:"center"}}>
+      <Col lg={12} style={{ marginTop:"20px"}}>
+        <details>
+        <summary>2025 Newsletters</summary>
+          {Newsletters2025.map((a) => {
+          return (
+            <>
+              <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/newsletter/2024/" + a}>{a}</a>
+              <br/>
+            </>
+          )
+        })}
+        </details>
+      </Col>
       <Col lg={12} style={{ marginTop:"20px"}}>
         <details>
         <summary>2024 Newsletters</summary>
