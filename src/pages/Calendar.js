@@ -7,6 +7,11 @@ function Calendar() {
               <h1>Calendar</h1>
       <h2>Welcome to 2025!</h2>
       <iframe title="2023" src="/documentation/2025 Calendar of Events  (5 March 2025).pdf" width="100%" height="800px"></iframe>
+
+      <details>
+        <summary>2024 Newsletters</summary>
+        <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/Calander of Events 2024 (updated).pdf"}>Calander of Events 2024</a>
+        </details>
       </div>
     </div>
   )
