@@ -4,10 +4,18 @@ function Calendar() {
   return (
     <div style={{margin:"10px"}}>
       <div style={{padding:"10px"}}>
-              <h1>Calendar</h1>
+      <h1>Calendar</h1>
       <h2>Welcome to 2025!</h2>
-      <iframe title="2023" src="/documentation/2025 Calendar of Events  (5 March 2025).pdf" width="100%" height="800px"></iframe>
-
+      <iframe title="2025" src="/documentation/Calendar of Events 2025 (4 August 2025).pdf" width="100%" height="800px"></iframe>
+      <details style={{ marginTop: '20px' }}>
+        <summary>View 2025 Excel File</summary>
+        <iframe
+          title="2025 Excel"
+          src={`https://docs.google.com/gview?url=${window.location.origin}/documentation/Calendar of Events 2025 (4 August 2025).xlsx&embedded=true`}
+          width="100%"
+          height="800px"
+        ></iframe>
+      </details>
       <details>
         <summary>2024 Newsletters</summary>
         <a className="newsletter123" target="_blank" rel="noreferrer" href={"/documentation/Calander of Events 2024 (updated).pdf"}>Calander of Events 2024</a>

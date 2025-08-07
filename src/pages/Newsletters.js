@@ -61,7 +61,10 @@ function Newsletters() {
   const Newsletters2025 = [
     "1. February 2025 Newsletter.pdf",
     "2. March 2025 Newsletter.pdf",
-    "3. April 2025 Newsletter.pdf"
+    "3. April 2025 Newsletter.pdf",
+    "4. May 2025 Newsletter.pdf",
+    "5. June 2025 Newsletter.pdf",
+    "6. July 2025 Newsletter.pdf"
   ]
 
   return (
@@ -69,7 +72,7 @@ function Newsletters() {
     <div style={{padding:"10px"}}>
     <h1>Newsletters</h1> 
     <h2>April 2025 Newsletter</h2>
-    <iframe title="2025" src="/documentation/newsletter/2025/3. April 2025 Newsletter.pdf" width="100%" height="800px"></iframe>
+    <iframe title="2025" src="/documentation/newsletter/2025/6. July 2025 Newsletter.pdf" width="100%" height="800px"></iframe>
       <Row style={{ textAlign:"center"}}>
       <Col lg={12} style={{ marginTop:"20px"}}>
         <details>
