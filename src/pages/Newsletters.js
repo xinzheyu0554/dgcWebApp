@@ -71,7 +71,7 @@ function Newsletters() {
     <div style={{margin:"10px"}}> 
     <div style={{padding:"10px"}}>
     <h1>Newsletters</h1> 
-    <h2>April 2025 Newsletter</h2>
+    <h2>July 2025 Newsletter</h2>
     <iframe title="2025" src="/documentation/newsletter/2025/6. July 2025 Newsletter.pdf" width="100%" height="800px"></iframe>
       <Row style={{ textAlign:"center"}}>
       <Col lg={12} style={{ marginTop:"20px"}}>
