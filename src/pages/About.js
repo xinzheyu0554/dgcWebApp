@@ -19,7 +19,7 @@ function About() {
                 </p>
                 <p>Historically our members, almost 50 of us, meet monthly (except January) to hear an expert speaker share knowledge on sustainable gardening topics including healthy soils, fertilisers and soil conditioners, grey water use, growing flowers, fruit and vegetables. The information sharing session is followed by supper - a friendly time together.</p>
 
-                <p>Our meeting is on the 2nd Wednesday of each month from February to December starting at 8pm. We meet at the Doncaster RSL Hall, Corner Doncaster Rd and Leeds St, Doncaster East just east of the Jackson Court Shopping Centre. There is ample parking at the rear of the Hall.</p>
+                <p>Our meeting is on the 2nd Wednesday of each month from February to December starting at 7:30 pm. We meet at the Doncaster RSL Hall, Corner Doncaster Rd and Leeds St, Doncaster East just east of the Jackson Court Shopping Centre. There is ample parking at the rear of the Hall.</p>
                 <GoogleMapSite />
             </Col>
 

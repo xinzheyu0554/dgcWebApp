@@ -20,7 +20,7 @@ export const router = [
     {
         path:"/about",
         element: About
-    },
+    }, 
     {
         path:"/calendar",
         element: Calendar
