@@ -65,7 +65,7 @@ function Newsletters() {
     "4. May 2025 Newsletter.pdf",
     "5. June 2025 Newsletter.pdf",
     "6. July 2025 Newsletter.pdf",
-     "7. August 2025 Newsletter.pdf",
+    "7. August 2025 Newsletter.pdf",
     "8. September 2025 Newsletter.pdf"
   ]
 
