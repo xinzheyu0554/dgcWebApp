@@ -72,6 +72,7 @@ function Newsletters() {
 
   const Newsletters2026 = [
     "DGC Newsletter February 2026.pdf",
+    "DGC Newsletter March 2026.pdf",
   ]
 
   return (
@@ -82,7 +83,7 @@ function Newsletters() {
 
         <iframe
           title="2026"
-          src="/documentation/newsletter/2026/DGC Newsletter February 2026.pdf"
+          src="/documentation/newsletter/2026/DGC Newsletter March 2026.pdf"
           width="100%"
           height="800px"
         />

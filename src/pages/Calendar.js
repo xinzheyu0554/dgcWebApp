@@ -9,7 +9,7 @@ function Calendar() {
 
         <iframe
           title="2026"
-          src="/documentation/2026 Calendar of events.pdf"
+          src="/documentation/Calendar of Events DGC 2026.pdf"
           width="100%"
           height="800px"
         />
