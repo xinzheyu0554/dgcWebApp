@@ -54,11 +54,11 @@ function Home() {
                     marginBottom: "14px",
                   }}
                 >
-                  Doncaster Garden Club began more than 46 years ago to help
+                  Doncaster Garden Club began 50 years ago to help
                   would-be gardeners with knowledge for growing plants. We are
                   affiliated with Garden Clubs of Australia.
                 </p>
-
+                
                 <p
                   style={{
                     fontSize: "18px",
