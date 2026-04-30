@@ -1,8 +1,8 @@
-// src/hooks/useQuery.js  (Plant)
+// src/hooks/useQuery.js
 import { useEffect, useState } from "react";
-import axiosClient from "../config/axios";
+import { getApiClient } from "../config/apiClient";
 
-const useQuery = (url, refetch) => {
+const useQuery = (url, { userId, refetch = 0 } = {}) => {
   const [state, setState] = useState({
     data: null,
     isLoading: true,
@@ -14,7 +14,8 @@ const useQuery = (url, refetch) => {
 
     const fetch = async () => {
       try {
-        const { data } = await axiosClient.get(url);
+        const client = getApiClient(userId);
+        const { data } = await client.get(url);
         if (!alive) return;
         setState({ data, isLoading: false, error: "" });
       } catch (error) {
@@ -31,7 +32,7 @@ const useQuery = (url, refetch) => {
     return () => {
       alive = false;
     };
-  }, [url, refetch]);
+  }, [url, userId, refetch]);
 
   return state;
 };

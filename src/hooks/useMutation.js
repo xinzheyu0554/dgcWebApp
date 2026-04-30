@@ -1,33 +1,31 @@
-// src/hooks/useMutation.js  (Plant)
-import { useToast } from "@chakra-ui/react";
+// src/hooks/useMutation.js
 import { useState } from "react";
-import axiosClient from "../config/axios";
+import { getApiClient } from "../config/apiClient";
 
-const useMutation = ({ url, method = "POST" }) => {
-  const toast = useToast();
+const useMutation = ({ url, userId, method = "POST" }) => {
   const [state, setState] = useState({
     isLoading: false,
     error: "",
   });
 
-  const fn = async (data) => {
-    setState((prev) => ({ ...prev, isLoading: true }));
+  const mutate = async (data) => {
+    setState((prev) => ({ ...prev, isLoading: true, error: "" }));
 
     try {
-      await axiosClient({ url, method, data });
+      const client = getApiClient(userId);
+      await client({ url, method, data });
       setState({ isLoading: false, error: "" });
-      toast({
-        title: "Successfully Added Image",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
+      return true;
     } catch (error) {
-      setState({ isLoading: false, error: error?.message || "Upload failed" });
+      setState({
+        isLoading: false,
+        error: error?.message || "Upload failed",
+      });
+      return false;
     }
   };
 
-  return { mutate: fn, ...state };
+  return { mutate, ...state };
 };
 
 export default useMutation;

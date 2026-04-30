@@ -1,9 +1,12 @@
 // src/components/Profile.jsx
 import React from "react";
 import { Box, Heading, Text, VStack } from "@chakra-ui/react";
+import { getGalleryAlbum } from "../config/galleryAlbums";
 import Posts from "./Posts";
 
 const Profile = () => {
+  const album = getGalleryAlbum("plants");
+
   return (
     <Box>
       <Box
@@ -15,10 +18,10 @@ const Profile = () => {
         boxShadow="sm"
       >
         <Heading size="lg" mb={2} color="gray.800">
-          Upload Photos
+          {album.uploadTitle}
         </Heading>
         <Text color="gray.600" mb={5}>
-          Click the upload button and select a JPG/PNG image.
+          {album.albumDescription}
         </Text>
 
         <VStack
@@ -30,19 +33,18 @@ const Profile = () => {
           borderRadius="14px"
           p={4}
         >
-          <Text fontSize="sm" color="gray.700">
-            Tips:
+          <Text fontSize="sm" color="gray.700" fontWeight={700}>
+            Tips
           </Text>
-          <Text fontSize="sm" color="gray.600">
-            • Use clear, well-lit photos for best results
-          </Text>
-          <Text fontSize="sm" color="gray.600">
-            • JPG and PNG formats only
-          </Text>
+          {album.tips?.map((t) => (
+            <Text key={t} fontSize="sm" color="gray.600">
+              • {t}
+            </Text>
+          ))}
         </VStack>
 
         <Box mt={6}>
-          <Posts />
+          <Posts album={album} />
         </Box>
       </Box>
     </Box>

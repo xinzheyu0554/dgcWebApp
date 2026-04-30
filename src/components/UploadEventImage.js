@@ -1,15 +1,9 @@
-// src/components/UploadImage.jsx
+// src/components/UploadEventImage.js
 import React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../config/theme";
 import ProfileEvent from "./ProfileEvent";
 
-function UploadImage() {
-  return (
-    <ChakraProvider theme={theme}>
-      <ProfileEvent />
-    </ChakraProvider>
-  );
+function UploadEventImage() {
+  return <ProfileEvent />;
 }
 
-export default UploadImage;
+export default UploadEventImage;

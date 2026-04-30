@@ -1,33 +1,11 @@
-// src/hooks/useMutation1.js  (Event)
-import { useToast } from "@chakra-ui/react";
-import { useState } from "react";
-import axiosClient from "../config/axiosNew";
+// src/hooks/useMutation1.js
+import { getGalleryAlbum } from "../config/galleryAlbums";
+import useMutation from "./useMutation";
 
+// Backward-compatible wrapper for the Events album.
 const useMutation1 = ({ url, method = "POST" }) => {
-  const toast = useToast();
-  const [state, setState] = useState({
-    isLoading: false,
-    error: "",
-  });
-
-  const fn = async (data) => {
-    setState((prev) => ({ ...prev, isLoading: true }));
-
-    try {
-      await axiosClient({ url, method, data });
-      setState({ isLoading: false, error: "" });
-      toast({
-        title: "Successfully Added Image",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
-    } catch (error) {
-      setState({ isLoading: false, error: error?.message || "Upload failed" });
-    }
-  };
-
-  return { mutate: fn, ...state };
+  const album = getGalleryAlbum("events");
+  return useMutation({ url, method, userId: album.userId });
 };
 
 export default useMutation1;

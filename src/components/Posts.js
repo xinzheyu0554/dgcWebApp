@@ -27,24 +27,26 @@ const ErrorText = ({ children, ...props }) => (
 
 const normalizeUrl = (u) => (typeof u === "string" ? u.trim() : "");
 
-const Posts = () => {
+const Posts = ({ album }) => {
   const [refetch, setRefetch] = useState(0);
   const [error, setError] = useState("");
   const [showArchive, setShowArchive] = useState(false);
   const [hidden, setHidden] = useState(() => new Set());
   const toast = useToast();
 
+  const inputId = `${album.key}ImageInput`;
+
   const {
     mutate: uploadImage,
     isLoading: uploading,
     error: uploadError,
-  } = useMutation({ url: URL });
+  } = useMutation({ url: URL, userId: album.userId });
 
   const {
     data: imageUrlsRaw = [],
     isLoading: imagesLoading,
     error: fetchError,
-  } = useQuery(URL, refetch);
+  } = useQuery(URL, { userId: album.userId, refetch });
 
   const imageUrls = useMemo(() => {
     const arr = Array.isArray(imageUrlsRaw) ? imageUrlsRaw : [];
@@ -77,16 +79,18 @@ const Posts = () => {
     const form = new FormData();
     form.append("image", file);
 
-    await uploadImage(form);
+    const ok = await uploadImage(form);
 
-    toast({
-      title: "Successfully Added Image",
-      status: "success",
-      duration: 2000,
-      position: "top",
-    });
+    if (ok) {
+      toast({
+        title: "Successfully added image",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
 
-    setTimeout(() => setRefetch((s) => s + 1), 900);
+      setTimeout(() => setRefetch((s) => s + 1), 700);
+    }
   };
 
   const hideUrl = (url) => {
@@ -100,10 +104,10 @@ const Posts = () => {
   return (
     <Box>
       <Box display="flex" alignItems="center" gap={3} mb={4} flexWrap="wrap">
-        <Input id="plantImageInput" type="file" hidden onChange={handleUpload} />
+        <Input id={inputId} type="file" hidden onChange={handleUpload} />
         <Button
           as="label"
-          htmlFor="plantImageInput"
+          htmlFor={inputId}
           colorScheme="green"
           variant="solid"
           cursor="pointer"
@@ -114,7 +118,7 @@ const Posts = () => {
         </Button>
 
         <Text fontSize="sm" color="gray.600">
-          Plant Gallery • Newest first • JPG / PNG only
+          {album.albumTitle} • Newest first • JPG / PNG only
         </Text>
       </Box>
 
@@ -159,7 +163,7 @@ const Posts = () => {
                   <Link href={url} isExternal>
                     <Image
                       src={url}
-                      alt="Plant image"
+                      alt={`${album.albumTitle} image`}
                       objectFit="cover"
                       width="100%"
                       height="100%"
@@ -208,7 +212,7 @@ const Posts = () => {
                       <Link href={url} isExternal>
                         <Image
                           src={url}
-                          alt="Plant archive image"
+                          alt={`${album.albumTitle} archive image`}
                           objectFit="cover"
                           width="100%"
                           height="100%"

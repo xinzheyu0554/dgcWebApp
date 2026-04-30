@@ -5,8 +5,14 @@ import "./index.css";
 import "./bootstrap.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "./config/theme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <ChakraProvider theme={theme}>
+    <App />
+  </ChakraProvider>
+);
 
 reportWebVitals();

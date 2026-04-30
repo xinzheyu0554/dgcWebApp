@@ -13,7 +13,7 @@ function PrivacyPolicy() {
         }}
       >
         <Container>
-          <div style={{ maxWidth: "920px" }}>
+          <div style={{ maxWidth: "920px", margin: "0 auto" }}>
             <div
               style={{
                 display: "inline-flex",

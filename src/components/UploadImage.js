@@ -1,15 +1,9 @@
-// src/components/UploadImage.jsx
+// src/components/UploadImage.js
 import React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
 import Profile from "./Profile";
-import theme from "../config/theme";
 
 function UploadImage() {
-  return (
-    <ChakraProvider theme={theme}>
-      <Profile />
-    </ChakraProvider>
-  );
+  return <Profile />;
 }
 
 export default UploadImage;
