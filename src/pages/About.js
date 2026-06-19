@@ -98,9 +98,7 @@ function About() {
                 documented below.
               </p>
 
-              <p>
-                Our senior members in their 80s and 90s have a huge reservoir of knowledge to share.
-              </p>
+
 
               <p>
                 Today, almost 50 members meet monthly (except January) to hear expert speakers share
