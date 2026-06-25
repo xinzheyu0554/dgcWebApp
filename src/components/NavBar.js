@@ -37,6 +37,9 @@ function NavBar() {
             <LinkContainer to="/newsletters">
               <Nav.Link className="dgc-navbar__link">Newsletters</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/speakers">
+              <Nav.Link className="dgc-navbar__link">Speakers presentation</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/contacts">
               <Nav.Link className="dgc-navbar__link">Contacts</Nav.Link>
             </LinkContainer>
