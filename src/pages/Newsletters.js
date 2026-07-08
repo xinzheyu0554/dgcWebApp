@@ -4,9 +4,12 @@ import { Container, Row, Col } from "react-bootstrap";
 function Newsletters() {
   const newsletters = {
     2026: [
-      "DGC Newsletter February 2026.pdf",
-      "DGC Newsletter March 2026.pdf",
+      "DGC July 2026 newsletter.pdf",
+      "DGC Newsletter June 2026.pdf",
+      "DGC Newsletter May 2026.pdf",
       "DGC Newsletter April 2026.pdf",
+      "DGC Newsletter March 2026.pdf",
+      "DGC Newsletter February 2026.pdf",
     ],
     2025: [
       "1. February 2025 Newsletter.pdf",
@@ -73,6 +76,8 @@ function Newsletters() {
     ],
   };
 
+  const latestNewsletter = newsletters[2026][0];
+
   return (
     <div className="dgc-page">
       <section className="dgc-simple-hero">
@@ -80,7 +85,9 @@ function Newsletters() {
           <div className="dgc-simple-hero__inner">
             <span className="dgc-badge">Newsletters</span>
             <h1>Newsletters</h1>
-            <p>Read the latest Doncaster Garden Club newsletters and browse previous years.</p>
+            <p>
+              Read the latest Doncaster Garden Club newsletters and browse previous years.
+            </p>
           </div>
         </Container>
       </section>
@@ -90,17 +97,17 @@ function Newsletters() {
           <Row className="justify-content-center">
             <Col lg={10} xl={9}>
               <div className="dgc-document-card">
-                <h2>April 2026 Newsletter</h2>
+                <h2>July 2026 Newsletter</h2>
 
                 <iframe
-                  title="April 2026 Newsletter"
-                  src="/documentation/newsletter/2026/DGC Newsletter April 2026.pdf"
+                  title="July 2026 Newsletter"
+                  src={`/documentation/newsletter/2026/${latestNewsletter}`}
                   className="dgc-pdf-frame"
                 />
 
                 <div className="dgc-details-list">
                   {Object.entries(newsletters).map(([year, files]) => (
-                    <details key={year}>
+                    <details key={year} open={year === "2026"}>
                       <summary>{year} Newsletters</summary>
 
                       <div className="dgc-link-list">
