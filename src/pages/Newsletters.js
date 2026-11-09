@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 function Newsletters() {
   const newsletters = {
     2026: [
+      "DGC Newsletter November 2026.pdf",
       "DGC Newsletter October 2026.pdf",
       "DGC Newsletter September 2026.pdf",
       "DGC Newsletter August 2026.pdf",
@@ -12,7 +13,7 @@ function Newsletters() {
       "DGC Newsletter May 2026.pdf",
       "DGC Newsletter April 2026.pdf",
       "DGC Newsletter March 2026.pdf",
-      "DGC Newsletter February 2026.pdf",
+      "DGC Newsletter February 2026.pdf"      
     ],
     2025: [
       "1. February 2025 Newsletter.pdf",
@@ -100,10 +101,10 @@ function Newsletters() {
           <Row className="justify-content-center">
             <Col lg={10} xl={9}>
               <div className="dgc-document-card">
-                <h2>October 2026 Newsletter</h2>
+                <h2>Newsletter November 2026</h2>
 
                 <iframe
-                  title="October 2026 Newsletter"
+                  title="DGC Newsletter November 2026"
                   src={`/documentation/newsletter/2026/${latestNewsletter}`}
                   className="dgc-pdf-frame"
                 />
