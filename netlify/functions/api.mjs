@@ -2,6 +2,8 @@ import { randomUUID } from 'node:crypto';
 import { githubUploadPdf, githubDeletePdf, githubReplacePdf } from '../../server/github.mjs';
 import { legacyNewsletters } from '../../server/legacy-newsletters.mjs';
 import { db } from '../../server/db.mjs';
+import { uploadGalleryPhoto } from '../../server/gallery-upload.mjs';
+import { galleryRoute } from '../../server/gallery.mjs';
 import {
   clearSessionCookie, getSessionToken, hashPassword, hashToken, makeToken,
   maxAge, publicUser, sessionCookie, verifyPassword,
@@ -163,6 +165,12 @@ async function handle(request) {
     return json({ ok: true });
   }
 
+  if (method === 'POST' && route === '/gallery/upload') {
+    return uploadGalleryPhoto(sql, request, await sessionUser(sql, request));
+  }
+
+  if (method === 'GET' && route === '/gallery') return galleryRoute(sql,request,method,route,false);
+
   if (method === 'GET' && route === '/newsletters') {
     return json({ newsletters: await allNewsletters(sql) });
   }
@@ -180,6 +188,7 @@ async function handle(request) {
   if (route.startsWith('/admin/')) {
     const user = await requireAdmin(sql, request);
     if (!user) return error('Administrator access required.', 403);
+    if (route.startsWith('/admin/gallery')) return galleryRoute(sql,request,method,route,true);
 
     if (method === 'GET' && route === '/admin/users') return json({ users: await allUsers(sql) });
     if (method === 'POST' && route === '/admin/users') {

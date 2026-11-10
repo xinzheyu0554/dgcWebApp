@@ -6,6 +6,7 @@ const Calendar = React.lazy(() => import("../pages/Calendar"));
 const Newsletters = React.lazy(() => import("../pages/Newsletters"));
 const Contacts = React.lazy(() => import("../pages/Contacts"));
 const Gallery = React.lazy(() => import("../pages/Gallery"));
+const GalleryPhotoDetail = React.lazy(() => import("../pages/GalleryPhotoDetail"));
 const BecomeAMember = React.lazy(() => import("../pages/BecomeAMember"));
 const PrivacyPolicy = React.lazy(() => import("../pages/PrivacyPolicy"));
 const EventGallery = React.lazy(() => import("../pages/EventGallery"));
@@ -16,6 +17,7 @@ const Dashboard = React.lazy(() => import("../pages/Dashboard"));
 export const router = [
   { path: "/login", element: Login },
   { path: "/dashboard", element: Dashboard },
+  { path: "/gallery/photo/:assetId", element: GalleryPhotoDetail },
   {
     path: "/",
     element: Home,

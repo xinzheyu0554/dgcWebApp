@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 import { api, jsonBody } from "../lib/api";
 import { useAuth } from "../context/AuthContext";
 import "../styles/dgc-dashboard.css";
+import GalleryManager from "../components/GalleryManager";
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const emptyNewUser = { email: "", full_name: "", password: "", role: "member" };
@@ -128,9 +129,11 @@ export default function Dashboard() {
           <div className="dgc-dashboard-tabs" role="tablist" aria-label="Dashboard navigation">
             <Button variant={tab === "account" ? "success" : "outline-secondary"} onClick={() => { setTab("account"); setAlert(null); }}>My account</Button>
             {admin && <Button variant={tab === "newsletters" ? "success" : "outline-secondary"} onClick={() => { setTab("newsletters"); setAlert(null); }}>Newsletter management</Button>}
+            {admin && <Button variant={tab === "gallery" ? "success" : "outline-secondary"} onClick={() => { setTab("gallery"); setAlert(null); }}>Photo management</Button>}
             {admin && <Button variant={tab === "users" ? "success" : "outline-secondary"} onClick={() => { setTab("users"); setAlert(null); }}>Account management</Button>}
           </div>
           {alert && <Alert variant={alert.variant} onClose={() => setAlert(null)} dismissible>{alert.message}</Alert>}
+          {admin && tab === "gallery" && <GalleryManager />}
           {tab === "account" && <div className="dgc-account-panel">
             <h2>My account</h2>
             <p><strong>Name:</strong> {user.full_name}</p>
