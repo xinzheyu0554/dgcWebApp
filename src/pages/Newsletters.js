@@ -102,9 +102,77 @@ function Newsletters() {
   }));
   const sorted = [...(records === null ? fallback : records)]
     .sort((a, b) => b.year - a.year || b.month - a.month || String(a.title).localeCompare(String(b.title)));
-  const latest = sorted[0];
-  const previewTitle = latest ? latest.title : "No newsletters available";
-  const previewUrl = latest?.url;
+  // Never embed an unavailable PDF: Netlify may return index.html
+  // for files that have not yet been deployed.
+  const [availablePreview, setAvailablePreview] = useState(null);
+  const [checkingPreview, setCheckingPreview] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    let controller = null;
+
+    async function checkAvailableNewsletter() {
+      if (controller) controller.abort();
+      controller = new AbortController();
+
+      const candidates = [...(records === null ? fallback : records)]
+        .sort((a, b) =>
+          b.year - a.year ||
+          b.month - a.month ||
+          String(a.title).localeCompare(String(b.title))
+        );
+
+      for (const newsletter of candidates) {
+        if (!newsletter.url) continue;
+
+        try {
+          const response = await fetch(newsletter.url, {
+            method: "HEAD",
+            cache: "no-store",
+            signal: controller.signal
+          });
+
+          const contentType =
+            response.headers.get("content-type") || "";
+
+          if (response.ok && /application\/pdf/i.test(contentType)) {
+            if (!cancelled) {
+              setAvailablePreview(newsletter);
+              setCheckingPreview(false);
+            }
+            return;
+          }
+        } catch (error) {
+          if (cancelled) return;
+        }
+      }
+
+      if (!cancelled) {
+        setAvailablePreview(null);
+        setCheckingPreview(false);
+      }
+    }
+
+    checkAvailableNewsletter();
+
+    // Automatically switch to the newest PDF after deployment.
+    const interval = setInterval(checkAvailableNewsletter, 20000);
+
+    return () => {
+      cancelled = true;
+      clearInterval(interval);
+      if (controller) controller.abort();
+    };
+
+    // The candidate list is rebuilt when API records change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [records]);
+
+  const previewTitle = availablePreview
+    ? availablePreview.title
+    : "Newsletter preview";
+
+  const previewUrl = availablePreview?.url;
   const grouped = sorted.reduce((byYear, item) => {
     (byYear[item.year] ||= []).push(item);
     return byYear;
@@ -132,11 +200,20 @@ function Newsletters() {
               <div className="dgc-document-card">
                 <h2>{previewTitle}</h2>
 
-                {previewUrl && <iframe
-                  title={previewTitle}
-                  src={previewUrl}
-                  className="dgc-pdf-frame"
-                />}
+                {checkingPreview && !previewUrl ? (
+                  <p>Checking available newsletter PDFs...</p>
+                ) : previewUrl ? (
+                  <iframe
+                    key={previewUrl}
+                    title={previewTitle}
+                    src={previewUrl}
+                    className="dgc-pdf-frame"
+                  />
+                ) : (
+                  <p>
+                    No newsletter PDF is currently available for preview.
+                  </p>
+                )}
 
                 <div className="dgc-details-list">
                   {years.map(year => (
