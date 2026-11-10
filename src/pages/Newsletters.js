@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Newsletters() {
+  const [records, setRecords] = useState(null);
+  useEffect(() => {
+    let active = true;
+    fetch("/api/newsletters")
+      .then(response => {
+        if (!response.ok) throw new Error("Newsletter service unavailable");
+        return response.json();
+      })
+      .then(data => { if (active) setRecords(data.newsletters || []); })
+      .catch(() => { /* Legacy PDFs remain visible if the API is unavailable. */ });
+    return () => { active = false; };
+  }, []);
   const newsletters = {
     2026: [
       "DGC Newsletter November 2026.pdf",
@@ -80,7 +92,24 @@ function Newsletters() {
     ],
   };
 
-  const latestNewsletter = newsletters[2026][0];
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const fallback = Object.entries(newsletters).flatMap(([year, files]) => files.map((filename, index) => {
+    const name = filename.toLowerCase();
+    const monthIndex = monthNames.findIndex(month => new RegExp(`\\b${month.toLowerCase()}\\b`, "i").test(name));
+    const abbreviation = monthIndex < 0 ? monthNames.findIndex(month => name.includes(month.slice(0, 3).toLowerCase())) : monthIndex;
+    return { id: `${year}-${index}`, year: Number(year), month: abbreviation + 1,
+      title: filename.replace(/\.pdf$/i, ""), url: `/documentation/newsletter/${year}/${filename}` };
+  }));
+  const sorted = [...(records === null ? fallback : records)]
+    .sort((a, b) => b.year - a.year || b.month - a.month || String(a.title).localeCompare(String(b.title)));
+  const latest = sorted[0];
+  const previewTitle = latest ? latest.title : "No newsletters available";
+  const previewUrl = latest?.url;
+  const grouped = sorted.reduce((byYear, item) => {
+    (byYear[item.year] ||= []).push(item);
+    return byYear;
+  }, {});
+  const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
 
   return (
     <div className="dgc-page">
@@ -101,28 +130,23 @@ function Newsletters() {
           <Row className="justify-content-center">
             <Col lg={10} xl={9}>
               <div className="dgc-document-card">
-                <h2>Newsletter November 2026</h2>
+                <h2>{previewTitle}</h2>
 
-                <iframe
-                  title="DGC Newsletter November 2026"
-                  src={`/documentation/newsletter/2026/${latestNewsletter}`}
+                {previewUrl && <iframe
+                  title={previewTitle}
+                  src={previewUrl}
                   className="dgc-pdf-frame"
-                />
+                />}
 
                 <div className="dgc-details-list">
-                  {Object.entries(newsletters).map(([year, files]) => (
-                    <details key={year} open={year === "2026"}>
+                  {years.map(year => (
+                    <details key={year} open={year === years[0]}>
                       <summary>{year} Newsletters</summary>
 
                       <div className="dgc-link-list">
-                        {files.map((file) => (
-                          <a
-                            key={file}
-                            target="_blank"
-                            rel="noreferrer"
-                            href={`/documentation/newsletter/${year}/${file}`}
-                          >
-                            {file}
+                        {grouped[year].map(file => (
+                          <a key={file.id} target="_blank" rel="noreferrer" href={file.url}>
+                            {file.title}
                           </a>
                         ))}
                       </div>

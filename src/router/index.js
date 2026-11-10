@@ -10,8 +10,12 @@ const BecomeAMember = React.lazy(() => import("../pages/BecomeAMember"));
 const PrivacyPolicy = React.lazy(() => import("../pages/PrivacyPolicy"));
 const EventGallery = React.lazy(() => import("../pages/EventGallery"));
 const Speakers = React.lazy(() => import("../pages/Speakers"));
+const Login = React.lazy(() => import("../pages/Login"));
+const Dashboard = React.lazy(() => import("../pages/Dashboard"));
 
 export const router = [
+  { path: "/login", element: Login },
+  { path: "/dashboard", element: Dashboard },
   {
     path: "/",
     element: Home,

@@ -1,0 +1,50 @@
+/* Scoped to new account pages only. No changes to the existing public site design. */
+.dgc-account-card,.dgc-account-panel{border:1px solid #e5e7eb;border-radius:14px;background:#fff;box-shadow:0 8px 25px rgba(0,0,0,.04)}
+.dgc-account-card .card-body{padding:2rem}
+.dgc-dashboard-layout{max-width:1100px;margin:0 auto}
+.dgc-dashboard-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.dgc-account-panel{padding:clamp(1rem,3vw,2rem)}
+.dgc-account-panel h2{margin-bottom:1rem}
+.dgc-account-panel h3{font-size:1.2rem;margin-bottom:1rem}
+.dgc-dashboard-form{display:grid;gap:1rem;max-width:680px}
+.dgc-dashboard-upload{margin-bottom:1.25rem}
+.dgc-dashboard-table{min-width:670px;vertical-align:middle}
+.dgc-dashboard-table th{white-space:nowrap}
+.dgc-dashboard-table .form-control{min-width:110px}
+.dgc-dashboard-actions{display:flex;gap:.35rem;flex-wrap:wrap}
+.dgc-dashboard-table td{font-size:.9rem}
+
+/* Fix login and dashboard text visibility */
+.dgc-account-card,
+.dgc-account-panel {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.dgc-account-card h1,
+.dgc-account-card h2,
+.dgc-account-card h3,
+.dgc-account-card label,
+.dgc-account-panel h1,
+.dgc-account-panel h2,
+.dgc-account-panel h3,
+.dgc-account-panel label {
+  color: #212529;
+}
+
+.dgc-account-card .form-control,
+.dgc-account-panel .form-control {
+  background-color: #ffffff;
+  color: #212529;
+  -webkit-text-fill-color: #212529;
+}
+
+.dgc-account-card .form-control::placeholder,
+.dgc-account-panel .form-control::placeholder {
+  color: #6c757d;
+}
+
+.dgc-account-card .text-muted,
+.dgc-account-panel .text-muted {
+  color: #6c757d !important;
+}
