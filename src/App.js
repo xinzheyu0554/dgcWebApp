@@ -3,10 +3,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import { AuthProvider } from "./context/AuthContext";
 import { router } from "./router/index";
 
 function App() {
   return (
+    <AuthProvider>
     <Router>
       <div className="app-shell">
         <NavBar />
@@ -26,6 +28,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </AuthProvider>
   );
 }
 
