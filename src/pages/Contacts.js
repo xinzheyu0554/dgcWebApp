@@ -28,7 +28,7 @@ function Contacts() {
 
                   <div className="dgc-contact-item">
                     <p className="dgc-contact-label">Hon. Secretary</p>
-                    <h3>Connie Lee &amp; Virginia Roberts</h3>
+                    <h3>Virginia Roberts</h3>
                     <p>
                       Email:{" "}
                       <a href="mailto:doncastergardenclubinc@gmail.com">
